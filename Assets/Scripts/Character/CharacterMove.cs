@@ -6,23 +6,34 @@ public class CharacterMove : MonoBehaviour
 {
     [SerializeField] Transform character;
 
-    Vector3 characterVelVector = Vector3.zero;
-    Vector3 characterRotationVector = Vector3.zero;
+    private Vector3 characterVelVector = Vector3.zero;
+    private Vector3 characterRotationVector = Vector3.zero;
 
     [SerializeField]
     [Range(0, 5)]
-    private float characterVel;
+    private float characterVel = 0.1f;
 
     [SerializeField]
     [Range(0, 5)]
-    private float characterRotation = 0;
+    private float characterRotation = 1.0f;
 
     private float smooth = 0.01f;
 
     bool rotations;
 
+    public void SetVel(float value) 
+    { 
+        characterVel = value; 
+    }
+
+    public void SetRot(float value)
+    {
+        characterRotation = value;
+    }
+
     void Start()
     {
+        character = GetComponent<Transform>();
         rotations = true;
     }
 
