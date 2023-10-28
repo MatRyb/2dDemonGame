@@ -12,7 +12,7 @@ public class CameraClamp : MonoBehaviour
         transform.position = new Vector3(
             Mathf.Clamp(targetToFollow.position.x, -30.5f, 30.5f),
             transform.position.y,
-            Mathf.Clamp(targetToFollow.position.z, -30f, 30f)
+            Mathf.Clamp(targetToFollow.position.z, -15f, 15f)
             );
     }
 }
