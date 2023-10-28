@@ -7,15 +7,22 @@ public class CharacterCollide : MonoBehaviour
     CharacterMove characterMove;
     void Start()
     {
-        characterMove = GetComponent<CharacterMove>();
+        characterMove = GetComponentInParent<CharacterMove>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if(collision.gameObject.tag == "charColl") 
-        {
+        if(collision.gameObject.tag == "charColl" || collision.gameObject.tag == "ActiveTrail")  // activeTrail and charcoll are practically the same
+        {                                                                                        // they are both there not to fuck up older code ;)
             characterMove.SetRot(0f);
             characterMove.SetVel(0f);
+        }
+    }
+    private void OnTriggerExit(Collider collision)
+    {
+        if(collision.gameObject.tag == "DormantTrail")
+        {
+            collision.gameObject.tag = "ActiveTrail";
         }
     }
 }

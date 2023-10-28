@@ -6,6 +6,10 @@ TagManager:
   tags:
   - charColl
   - charTrig
+  - Trail
+  - ActiveTrail
+  - DormantTrail
+  - NewTrail
   layers:
   - Default
   - TransparentFX
@@ -13,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Trail
   - 
   - 
   - 
