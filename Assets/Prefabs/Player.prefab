@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1311372737324111576}
   m_Layer: 0
   m_Name: PlayerModel
-  m_TagString: Player
+  m_TagString: PlayerModel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,6 +243,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 061b0c86bcf8b134fbaf592609ffb4da, type: 3}
   - {fileID: 8300000, guid: 208c654c22661f7478bd455c1152f427, type: 3}
   pivot: {fileID: 540941087174532438}
+  charModel: {fileID: 0}
   characterVel: 0.3
   characterRotation: 2.8
   characterSlowDown: 0.6
