@@ -15,16 +15,13 @@ public class TurningState : IState
         {
             controller.audioSource.time = 0;
         }
+        else if(controller.characterAccelerateTimer < 0)
+        {
+            controller.audioSource.time = 0;
+        }
         else
         {   
-            if(controller.characterAccelerateTimer > controller.audioSource.clip.length)
-            {
-                controller.audioSource.time = controller.audioSource.clip.length;
-            }
-            else
-            {
-                controller.audioSource.time = controller.characterAccelerateTimer;
-            }
+            controller.audioSource.time = controller.characterAccelerateTimer;
         }
 
         timeElapsed = 0f;
