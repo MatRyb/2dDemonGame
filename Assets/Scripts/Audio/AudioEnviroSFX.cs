@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioEnviroSFX : AudioManager
+public class AudioEnviroSFX : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] public AudioSource audioSource;
+    [SerializeField] public AudioClip[] enviroSfx = null;
 
     void Start()
     {

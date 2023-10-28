@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterExtinguish : MonoBehaviour
 {
+    [SerializeField] private AudioEnviroSFX audioEnviroSFX;
     bool triggered = false;
     [SerializeField] private float time = 0.01f;
 
@@ -13,6 +14,8 @@ public class CharacterExtinguish : MonoBehaviour
 
         if(other.gameObject.tag == "charTrig")
         {
+            audioEnviroSFX.audioSource.clip = audioEnviroSFX.enviroSfx[0];
+            audioEnviroSFX.audioSource.Play();
             triggered = true;
             other.GetComponent<FireExtinguish>().Extinguish(time);
         }
