@@ -6,6 +6,8 @@ public class CharacterCollide : MonoBehaviour
 {
     CharacterMove characterMove;
     Rigidbody rb;
+    [SerializeField]
+    GameManager gameManager;
 
     void Start()
     {
@@ -29,5 +31,6 @@ public class CharacterCollide : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeAll;
 
         // THIS IS WHERE THE "ON DEATH" code will go
+        gameManager.HandleDeath();
     }
 }
