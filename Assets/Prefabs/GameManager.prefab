@@ -48,4 +48,4 @@ MonoBehaviour:
   deathMenu: {fileID: 0}
   winMenu: {fileID: 0}
   timer: {fileID: 0}
-  numberOfFires: 2
+  numberOfFires: 6
