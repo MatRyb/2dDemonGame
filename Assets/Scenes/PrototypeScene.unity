@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 9afcc54b0991c63429dace4abfa8ac91, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -144,19 +144,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5252936326325091111, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
   m_PrefabInstance: {fileID: 1565508532}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &935021420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935021418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4267269501cb4241866a32b26855bb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathMenu: {fileID: 935021418}
 --- !u!114 &951707184 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3704408840693327171, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
@@ -247,18 +234,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2086669621829162911, guid: 1e4cb08a39769b14d8a639e1a3cdd7fc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3802820759448837161, guid: 1e4cb08a39769b14d8a639e1a3cdd7fc, type: 3}
-      propertyPath: enviroSfx.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3802820759448837161, guid: 1e4cb08a39769b14d8a639e1a3cdd7fc, type: 3}
-      propertyPath: enviroSfx.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: d9b87a72aa73add40b20a40a169f4c69, type: 3}
     - target: {fileID: 5451646346344213628, guid: 1e4cb08a39769b14d8a639e1a3cdd7fc, type: 3}
       propertyPath: character
       value: 
@@ -280,6 +255,7 @@ GameObject:
   - component: {fileID: 1510744264}
   - component: {fileID: 1510744263}
   - component: {fileID: 1510744262}
+  - component: {fileID: 1510744266}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -374,6 +350,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1510744266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510744261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: ae5637be68f717241af50a16f12c2fe9, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1001 &1565508532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -382,34 +375,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1489701075666556884, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1489701075666556884, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1489701075666556884, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 935021420}
-    - target: {fileID: 1489701075666556884, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1489701075666556884, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReturnToMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 1489701075666556884, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DeathMenuController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1489701075666556884, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1982105760176769624, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
       propertyPath: m_LocalPosition.x
       value: 382.23917
@@ -454,41 +419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ====UI====
       objectReference: {fileID: 0}
-    - target: {fileID: 8828916113104807574, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8828916113104807574, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8828916113104807574, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 935021420}
-    - target: {fileID: 8828916113104807574, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8828916113104807574, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReloadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 8828916113104807574, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DeathMenuController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8828916113104807574, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5252936326325091111, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 935021420}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
 --- !u!1 &1783010363
 GameObject:
