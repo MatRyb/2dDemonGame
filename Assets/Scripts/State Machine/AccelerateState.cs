@@ -13,7 +13,12 @@ public class AccelerateState : IState
     }
     public void UpdateState(StateController controller)
     {
-        if(controller.character.jumping)
+        if (!controller.character.movable)
+        {
+            OnCrash(controller);
+        }
+
+        if (controller.character.jumping)
         {
             controller.ChangeState(controller.jumpState);
         }
@@ -32,13 +37,12 @@ public class AccelerateState : IState
 
         timeBeforeFullAccelerate -= Time.deltaTime;
     }
-
-    public void OnTurn(StateController controller)
-    {
-        controller.characterAccelerateTimer = 6 - timeBeforeFullAccelerate;
-        controller.ChangeState(controller.turningState);
-    }
     public void OnExit(StateController controller)
     {
+    }
+
+    public void OnCrash(StateController controller)
+    {
+        controller.ChangeState(controller.deadState);
     }
 }

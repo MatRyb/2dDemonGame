@@ -12,6 +12,11 @@ public class FullEngineState : IState
     }
     public void UpdateState(StateController controller)
     {
+        if (!controller.character.movable)
+        {
+            OnCrash(controller);
+        }
+
         if (controller.character.jumping)
         {
             controller.ChangeState(controller.jumpState);
@@ -21,17 +26,16 @@ public class FullEngineState : IState
         if (controller.characterTurning)
         {
             controller.characterAccelerateTimer = 6;
+            controller.audioSource.loop = false;
             controller.ChangeState(controller.turningState);
         }
     }
-
-    public void OnTurn(StateController controller)
-    {
-        controller.audioSource.loop = false;
-        controller.ChangeState(controller.turningState);
-    }
-
     public void OnExit(StateController controller)
     {
+    }
+
+    public void OnCrash(StateController controller)
+    {
+        controller.ChangeState(controller.deadState);
     }
 }

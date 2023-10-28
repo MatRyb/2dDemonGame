@@ -34,6 +34,12 @@ public class TurningState : IState
     }
     public void UpdateState(StateController controller)
     {
+        if (!controller.character.movable)
+        {
+            OnCrash(controller);
+            controller.character.gameObject.GetComponent<AudioSource>().Stop();
+        }
+
         if (controller.character.jumping)
         {
             controller.ChangeState(controller.jumpState);
@@ -67,7 +73,8 @@ public class TurningState : IState
     {
     }
 
-    public void OnTurn(StateController controller)
+    public void OnCrash(StateController controller)
     {
+        controller.ChangeState(controller.deadState);
     }
 }

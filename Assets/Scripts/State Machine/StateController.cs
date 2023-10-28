@@ -10,6 +10,7 @@ public class StateController : MonoBehaviour
     public FullEngineState fullEngineState = new FullEngineState();
     public TurningState turningState = new TurningState();
     public JumpState jumpState = new JumpState();
+    public DeadState deadState = new DeadState();
 
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public CharacterMove character;
@@ -52,6 +53,6 @@ public interface IState
 {
     void OnExit(StateController controller);
     void OnEnter(StateController controller);
-    void OnTurn(StateController controller);
     void UpdateState(StateController controller);
+    void OnCrash(StateController controller);
 }
