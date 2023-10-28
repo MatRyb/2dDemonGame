@@ -249,7 +249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2086669621829162911, guid: 1e4cb08a39769b14d8a639e1a3cdd7fc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3802820759448837161, guid: 1e4cb08a39769b14d8a639e1a3cdd7fc, type: 3}
       propertyPath: enviroSfx.Array.size
