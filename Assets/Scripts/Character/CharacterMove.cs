@@ -37,7 +37,7 @@ public class CharacterMove : MonoBehaviour
     float progress = 0f;
     float jumpTime = 0.5f;
 
-    bool jumping = false;
+    public bool jumping = false;
 
     private Vector3 startSize;
     private Vector3 maxSize;
