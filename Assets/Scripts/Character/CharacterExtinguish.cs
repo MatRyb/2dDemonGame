@@ -9,6 +9,8 @@ public class CharacterExtinguish : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Triggered Fire COllider");
+
         if(other.gameObject.tag == "charTrig")
         {
             triggered = true;
