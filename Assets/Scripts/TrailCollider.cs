@@ -31,7 +31,7 @@ public class TrailCollider : MonoBehaviour
         
         if (characterMove.GetVel() != 0)
         {
-            if(characterMove.GetVel()*i >= 7.0)
+            if(characterMove.GetVel()*i >= 5.0) // 7.0 jest spoko ale nie pamietam dlaczego :))
             {
                 newCollider = Instantiate(colliderDaddy);
                 newCollider.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
