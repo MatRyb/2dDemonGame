@@ -16,8 +16,12 @@ public class TrailCollider : MonoBehaviour
 
     private bool colliding;
 
+    private Vector3 baseScale;
+
     private void Start()
     {
+        baseScale = transform.localScale;
+
         CreateTrailObject();
         StartCoroutine(DropTrail(0f));
     }
@@ -26,6 +30,7 @@ public class TrailCollider : MonoBehaviour
     {
         // Create the Object and set it BEHIND the player
         GameObject obj = Instantiate(colliderDaddy, spawnCollider.transform.position, spawnCollider.transform.rotation);
+        // obj.transform.localScale = new Vector3(baseScale.x, baseScale.y, baseScale.z);
 
         // Ensure the player object is the parent of the trail object
         obj.transform.SetParent(this.transform);
@@ -58,7 +63,7 @@ public class TrailCollider : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!colliding && characterMove.rb.velocity.y == 0)
+        if (!colliding)
         {
             StartCoroutine(DropTrail(Random.Range(0.01f,0.04f)));
         }

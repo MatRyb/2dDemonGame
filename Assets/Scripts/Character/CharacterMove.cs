@@ -9,6 +9,7 @@ public class CharacterMove : MonoBehaviour
     [SerializeField] public AudioClip[] clips;
 
     [SerializeField] Transform pivot;
+    [SerializeField] Transform charModel;
 
     private Vector3 characterVelVector = Vector3.zero;
     private Vector3 characterRotationVector = Vector3.zero;
@@ -31,6 +32,18 @@ public class CharacterMove : MonoBehaviour
     public bool rotations;
     public bool movable;
 
+    // Jump Variables
+
+    float progress = 0f;
+    float jumpTime = 0.5f;
+
+    bool jumping = false;
+
+    private Vector3 startSize;
+    private Vector3 maxSize;
+
+    // End of Jump Variables
+
     public void SetVel(float value) 
     { 
         characterVel = value; 
@@ -52,6 +65,21 @@ public class CharacterMove : MonoBehaviour
         pivot = GetComponent<Transform>();
         rotations = false;
         movable = true;
+
+        foreach(Transform child in transform)
+        {
+            if(child.tag == "PlayerModel")
+            {
+                charModel = child;
+            }
+        }
+
+        startSize = charModel.localScale;
+
+        maxSize = new Vector3
+            (startSize.x + 3f,
+            startSize.y + 3f,
+            startSize.z + 3f);
     }
 
     // Set up custom Methods to fit in the "movable" if statement
@@ -69,12 +97,47 @@ public class CharacterMove : MonoBehaviour
         {
             MovementUpdater();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && jumping == false)
+        {
+            jumping = true;
+            StartCoroutine(Jump());
+        }
     }
 
+    IEnumerator Jump()
+    {
+        CapsuleCollider capCol = GetComponentInChildren<CapsuleCollider>();
 
+        capCol.enabled = false;
 
+        progress = 0f;
 
+        do
+        {
+            charModel.localScale = Vector3.Lerp(startSize, maxSize, progress / jumpTime);
+            progress += Time.deltaTime;
+            yield return null;
+        }
+        while (progress < jumpTime);
 
+        yield return new WaitForSeconds(0.5f);
+
+        progress = 0f;
+
+        do
+        {
+            charModel.localScale = Vector3.Lerp(maxSize, startSize, progress / jumpTime);
+            progress += Time.deltaTime;
+            yield return null;
+        }
+        while (progress < jumpTime);
+
+        capCol.enabled = true;
+
+        jumping = false;
+
+    }
 
 
     // Custom Movement and Rotation methods.

@@ -8,6 +8,7 @@ TagManager:
   - charTrig
   - ActiveTrail
   - InActiveTrail
+  - PlayerModel
   layers:
   - Default
   - TransparentFX
