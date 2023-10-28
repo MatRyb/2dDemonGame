@@ -26,6 +26,10 @@ public class CharacterMove : MonoBehaviour
         characterVel = value; 
     }
 
+    public float GetVel()
+    {
+        return characterVel;
+    }
     public void SetRot(float value)
     {
         characterRotation = value;
