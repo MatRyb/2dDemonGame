@@ -45,7 +45,7 @@ public class CharacterMove : MonoBehaviour
 
     void Start()
     {
-        characterVelVector.y = characterVel;
+        characterVelVector.x = characterVel;
         pivot = GetComponent<Transform>();
         childAxis = GetComponentInChildren<Transform>();
         rotations = true;
@@ -55,17 +55,17 @@ public class CharacterMove : MonoBehaviour
     {
         if(rotations)
         {
-            if(characterVelVector.y > characterVel * characterSlowDown)
+            if(characterVelVector.x > characterVel * characterSlowDown)
             {
-                characterVelVector.y = characterVelVector.y * 0.90f;
+                characterVelVector.x = characterVelVector.x * 0.90f;
             }
             pivot.transform.Translate(characterVelVector);
         }
         else
         {
-            if(characterVelVector.y < characterVel) 
+            if(characterVelVector.x < characterVel) 
             {
-                characterVelVector.y += characterVelSpeedUpAfterTurningMovement;
+                characterVelVector.x += characterVelSpeedUpAfterTurningMovement;
                 pivot.transform.Translate(characterVelVector);
             }
             else
@@ -77,28 +77,28 @@ public class CharacterMove : MonoBehaviour
 
 
         pivot.transform.Rotate(characterRotationVector);
-        if (characterRotationVector.z != 0 && !rotations)
+        if (characterRotationVector.y != 0 && !rotations)
         {
-            characterRotationVector.z *= smooth;
+            characterRotationVector.y *= smooth;
         }
     }
 
     private void Update()
     {
-        if (characterVel < characterVelVector.y)
+        if (characterVel < characterVelVector.x)
         { 
-            characterVelVector.y = characterVel;
+            characterVelVector.x = characterVel;
         }
 
         rotations = false;
         if (Input.GetKey(KeyCode.A))
         {
-            characterRotationVector.z = characterRotation;
+            characterRotationVector.y = -characterRotation;
             rotations = true;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            characterRotationVector.z = -characterRotation;
+            characterRotationVector.y = characterRotation;
             rotations = true;
         }
     }
