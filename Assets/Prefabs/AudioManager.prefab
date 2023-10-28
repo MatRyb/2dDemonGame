@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8607379659687256074}
   enviroSfx:
-  - {fileID: 8300000, guid: d9b87a72aa73add40b20a40a169f4c69, type: 3}
+  - {fileID: 8300000, guid: 55692f9721a516b4ba7550726a3f001e, type: 3}
 --- !u!1 &1961951282597292444
 GameObject:
   m_ObjectHideFlags: 0
