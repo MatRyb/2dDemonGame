@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class CharacterMove : MonoBehaviour
 {
+    [SerializeField] public AudioSource audioSource;
+    [SerializeField] public AudioClip[] clips;
+
     [SerializeField] Transform pivot;
 
     private Vector3 characterVelVector = Vector3.zero;
@@ -44,6 +47,7 @@ public class CharacterMove : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         characterVelVector.x = characterVel;
         pivot = GetComponent<Transform>();
         rotations = false;
@@ -97,7 +101,7 @@ public class CharacterMove : MonoBehaviour
     private void RotateUpdate()
     {
         if (rotations)
-        {
+        { 
             if (characterVelVector.x > characterVel * characterSlowDown)
             {
                 characterVelVector.x = characterVelVector.x * 0.99f;
