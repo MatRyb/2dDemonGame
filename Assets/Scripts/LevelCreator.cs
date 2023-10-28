@@ -19,10 +19,6 @@ public class LevelCreator : MonoBehaviour
         {
             Instantiate(firePrefab, new Vector3(fire.x,fire.y,fire.z), Quaternion.identity);
         }
-        foreach (Vector3 obstacle in level.obstaclesPositions)
-        {
-            Instantiate(obstaclePrefab, new Vector3(obstacle.x, obstacle.y, obstacle.z), Quaternion.identity);
-        }
     }
 
 }
