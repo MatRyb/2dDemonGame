@@ -57,7 +57,7 @@ public class CharacterMove : MonoBehaviour
         {
             if(characterVelVector.x > characterVel * characterSlowDown)
             {
-                characterVelVector.x = characterVelVector.x * 0.90f;
+                characterVelVector.x = characterVelVector.x * 0.99f;
             }
             pivot.transform.Translate(characterVelVector);
         }

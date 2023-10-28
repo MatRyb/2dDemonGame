@@ -173,15 +173,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 637565039507113441, guid: 47492bfe11abb49c480eb5114914d45f, type: 3}
       propertyPath: characterVel
-      value: 0.15
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 637565039507113441, guid: 47492bfe11abb49c480eb5114914d45f, type: 3}
       propertyPath: characterRotation
-      value: 3
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 637565039507113441, guid: 47492bfe11abb49c480eb5114914d45f, type: 3}
       propertyPath: characterSlowDown
-      value: 0.7
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3186503992316507403, guid: 47492bfe11abb49c480eb5114914d45f, type: 3}
       propertyPath: m_Name
