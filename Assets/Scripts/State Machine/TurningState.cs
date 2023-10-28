@@ -17,7 +17,7 @@ public class TurningState : IState
         }
         else
         {
-            Debug.Log(controller.characterAccelerateTimer);
+            //Debug.Log(controller.characterAccelerateTimer);
             controller.audioSource.time = controller.characterAccelerateTimer;
         }
 
