@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharacterMove : MonoBehaviour
@@ -18,6 +19,7 @@ public class CharacterMove : MonoBehaviour
     private float characterRotation = 1.0f;
 
     private float smooth = 0.01f;
+    private float characterVelSpeedUpAfterTurningMovement = 0.003f;
 
     bool rotations;
 
@@ -33,13 +35,35 @@ public class CharacterMove : MonoBehaviour
 
     void Start()
     {
+        characterVelVector.y = characterVel;
         character = GetComponent<Transform>();
         rotations = true;
     }
 
     private void FixedUpdate()
     {
-        character.transform.Translate(characterVelVector);
+        if(rotations)
+        {
+            if(characterVelVector.y > characterVel * 0.5f)
+            {
+                characterVelVector.y = characterVelVector.y * 0.90f;
+            }
+            character.transform.Translate(characterVelVector);
+        }
+        else
+        {
+            if(characterVelVector.y < characterVel) 
+            {
+                characterVelVector.y += characterVelSpeedUpAfterTurningMovement;
+                character.transform.Translate(characterVelVector);
+            }
+            else
+            {
+                character.transform.Translate(characterVelVector * 1.0f);
+            }
+
+        }
+
 
         character.transform.Rotate(characterRotationVector);
         if (characterRotationVector.z != 0 && !rotations)
@@ -50,7 +74,10 @@ public class CharacterMove : MonoBehaviour
 
     private void Update()
     {
-        characterVelVector.y = characterVel;
+        if (characterVel < characterVelVector.y)
+        { 
+            characterVelVector.y = characterVel;
+        }
 
         rotations = false;
         if (Input.GetKey(KeyCode.A))
