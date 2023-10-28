@@ -27,7 +27,7 @@ public class CharacterMove : MonoBehaviour
 
     private Transform childAxis;
 
-    bool rotations;
+    public bool rotations;
 
     public void SetVel(float value) 
     { 
