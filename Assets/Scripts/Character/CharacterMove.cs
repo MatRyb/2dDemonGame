@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CharacterMove : MonoBehaviour
 {
-    [SerializeField] Transform character;
+    [SerializeField] Transform pivot;
 
     private Vector3 characterVelVector = Vector3.zero;
     private Vector3 characterRotationVector = Vector3.zero;
@@ -18,8 +18,14 @@ public class CharacterMove : MonoBehaviour
     [Range(0, 5)]
     private float characterRotation = 1.0f;
 
+    [SerializeField]
+    [Range(0.1f, 2.0f)]
+    private float characterSlowDown = 0.5f;
+
     private float smooth = 0.01f;
     private float characterVelSpeedUpAfterTurningMovement = 0.003f;
+
+    private Transform childAxis;
 
     bool rotations;
 
@@ -40,7 +46,8 @@ public class CharacterMove : MonoBehaviour
     void Start()
     {
         characterVelVector.y = characterVel;
-        character = GetComponent<Transform>();
+        pivot = GetComponent<Transform>();
+        childAxis = GetComponentInChildren<Transform>();
         rotations = true;
     }
 
@@ -48,28 +55,28 @@ public class CharacterMove : MonoBehaviour
     {
         if(rotations)
         {
-            if(characterVelVector.y > characterVel * 0.5f)
+            if(characterVelVector.y > characterVel * characterSlowDown)
             {
                 characterVelVector.y = characterVelVector.y * 0.90f;
             }
-            character.transform.Translate(characterVelVector);
+            pivot.transform.Translate(characterVelVector);
         }
         else
         {
             if(characterVelVector.y < characterVel) 
             {
                 characterVelVector.y += characterVelSpeedUpAfterTurningMovement;
-                character.transform.Translate(characterVelVector);
+                pivot.transform.Translate(characterVelVector);
             }
             else
             {
-                character.transform.Translate(characterVelVector * 1.0f);
+                pivot.transform.Translate(characterVelVector * 1.0f);
             }
 
         }
 
 
-        character.transform.Rotate(characterRotationVector);
+        pivot.transform.Rotate(characterRotationVector);
         if (characterRotationVector.z != 0 && !rotations)
         {
             characterRotationVector.z *= smooth;
