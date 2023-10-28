@@ -32,5 +32,6 @@ public class CharacterCollide : MonoBehaviour
 
         // THIS IS WHERE THE "ON DEATH" code will go
         gameManager.HandleDeath();
+        // I am become Death the Destroy of Worlds!
     }
 }
