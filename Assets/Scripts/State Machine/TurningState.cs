@@ -22,6 +22,13 @@ public class TurningState : IState
         }
 
         timeElapsed = 0f;
+
+
+        if(Random.Range(0,2) < 1)
+        {
+            controller.character.gameObject.GetComponent<AudioSource>().clip = controller.character.gameObject.GetComponent<CharacterMove>().clips[Random.Range(0, 3)];
+            controller.character.gameObject.GetComponent<AudioSource>().Play();
+        }
     }
     public void UpdateState(StateController controller)
     {
@@ -37,11 +44,13 @@ public class TurningState : IState
                 controller.characterAccelerateTimer = 6;
             }
             controller.ChangeState(controller.accelerateState);
+            controller.character.gameObject.GetComponent<AudioSource>().Stop();
         }
         if(controller.audioSource.time > 5.99f)
         {
             controller.characterAccelerateTimer = 6;
             controller.ChangeState(controller.accelerateState);
+            controller.character.gameObject.GetComponent<AudioSource>().Stop();
         }
         timeElapsed += Time.deltaTime;
     }
