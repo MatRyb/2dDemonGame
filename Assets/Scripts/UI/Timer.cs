@@ -32,4 +32,9 @@ public class Timer : MonoBehaviour
         }
         clock.text += seconds;
     }
+
+    public float getWinTime()
+    {
+        return gameTime;
+    }
 }
