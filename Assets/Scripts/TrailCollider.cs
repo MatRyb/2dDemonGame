@@ -31,7 +31,7 @@ public class TrailCollider : MonoBehaviour
                                                 // i have truly no idea wtf is going on
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         i++;
         
