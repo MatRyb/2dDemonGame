@@ -14,7 +14,7 @@ public class RadioManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        currentSong = 0;
+        currentSong = Random.Range(0,3);
     }
 
     void Update()
