@@ -9,6 +9,7 @@ public class StateController : MonoBehaviour
     public AccelerateState accelerateState = new AccelerateState();
     public FullEngineState fullEngineState = new FullEngineState();
     public TurningState turningState = new TurningState();
+    public JumpState jumpState = new JumpState();
 
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public CharacterMove character;

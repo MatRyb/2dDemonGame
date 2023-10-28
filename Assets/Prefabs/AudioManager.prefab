@@ -289,8 +289,11 @@ MonoBehaviour:
   character: {fileID: 0}
   sfx:
   - {fileID: 8300000, guid: 675bb9f1224c46648bba6fb653be0b2c, type: 3}
-  - {fileID: 8300000, guid: 4133ce7d749fab947b8cec175554708f, type: 3}
+  - {fileID: 8300000, guid: eafb1606db5cac447afe1fc7f90cc181, type: 3}
   - {fileID: 8300000, guid: 350e7866e229d9e46997f1b4c9b1b465, type: 3}
+  - {fileID: 8300000, guid: 195f6d161d0a01445ab76eee90d3eb33, type: 3}
+  - {fileID: 8300000, guid: 6dba353dacc04e543b7572f9d8ecaea1, type: 3}
+  - {fileID: 8300000, guid: a43f13bb9228ab7439d1dbff1b87d6d0, type: 3}
   characterTurning: 0
   characterAccelerateTimer: 0
 --- !u!1 &2086669621829162911

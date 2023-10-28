@@ -26,7 +26,6 @@ public class TurningState : IState
 
         timeElapsed = 0f;
 
-
         if(Random.Range(0,2) < 1)
         {
             controller.character.gameObject.GetComponent<AudioSource>().clip = controller.character.gameObject.GetComponent<CharacterMove>().clips[Random.Range(0, 3)];
@@ -35,6 +34,12 @@ public class TurningState : IState
     }
     public void UpdateState(StateController controller)
     {
+        if (controller.character.jumping)
+        {
+            controller.ChangeState(controller.jumpState);
+            controller.character.gameObject.GetComponent<AudioSource>().Stop();
+        }
+
         controller.characterTurning = controller.character.rotations;
         if (!controller.characterTurning)
         {
