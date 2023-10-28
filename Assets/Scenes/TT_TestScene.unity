@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.z
@@ -253,10 +253,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 264559667813670248, guid: 47492bfe11abb49c480eb5114914d45f, type: 3}
-      propertyPath: m_Name
-      value: PlayerModel
-      objectReference: {fileID: 0}
     - target: {fileID: 540941087174532438, guid: 47492bfe11abb49c480eb5114914d45f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.55
@@ -302,7 +298,11 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5316452625449174522, guid: 47492bfe11abb49c480eb5114914d45f, type: 3}
-      propertyPath: m_IsKinematic
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8497862059125035586, guid: 47492bfe11abb49c480eb5114914d45f, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -332,7 +332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.z
@@ -573,7 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.z
@@ -840,7 +840,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3cdeb87f9b9a2480ea91c4f71bf98682, type: 2}
+  - {fileID: 2100000, guid: d264b26434739469da4a53f511de9416, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

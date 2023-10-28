@@ -19,7 +19,7 @@ public class TrailCollider : MonoBehaviour
     private void Start()
     {
         CreateTrailObject();
-        DropTrail();
+        StartCoroutine(DropTrail(0f));
     }
 
     private void CreateTrailObject()
@@ -34,8 +34,10 @@ public class TrailCollider : MonoBehaviour
         obj.tag = "InActiveTrail";
     }
 
-    private void DropTrail()
+    IEnumerator DropTrail(float randDelay)
     {
+        yield return new WaitForSeconds(randDelay);
+
         // Grab the collider object
         ColliderDaddyScript colliderObj = GetComponentInChildren<ColliderDaddyScript>();
 
@@ -56,9 +58,9 @@ public class TrailCollider : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!colliding)
+        if (!colliding && characterMove.rb.velocity.y == 0)
         {
-            DropTrail();
+            StartCoroutine(DropTrail(Random.Range(0.01f,0.04f)));
         }
     }
 }

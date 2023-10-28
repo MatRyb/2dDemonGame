@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class ColliderDaddyScript : MonoBehaviour
 {
-    //public bool active;
+    private Vector3 randLoc;
+    private Vector3 curLoc;
+
+    private float t = 0f;
+    
 
     public void Detach()
     {
+        curLoc = transform.position;
+
+        float randomizer = Random.Range(0.2f,0.5f);
+
+        randLoc = new Vector3(curLoc.x - randomizer, curLoc.y, curLoc.z - randomizer);
+
+        StartCoroutine(LerpFunction());
+
         StartCoroutine(DelayToActivate(1f));
     }
 
@@ -19,5 +31,19 @@ public class ColliderDaddyScript : MonoBehaviour
         // set trail to active
         this.tag = "charColl";
         this.GetComponent<SphereCollider>().isTrigger = false;
+    }
+
+    IEnumerator LerpFunction()
+    {
+        while (t < 1)
+        {
+            t += Time.deltaTime;
+
+            if (t > 1) t = 1;
+
+            transform.position = Vector3.Lerp(curLoc, randLoc, t);
+
+            yield return null;
+        }
     }
 }
