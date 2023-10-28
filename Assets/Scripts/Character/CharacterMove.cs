@@ -46,7 +46,7 @@ public class CharacterMove : MonoBehaviour
     {
         characterVelVector.x = characterVel;
         pivot = GetComponent<Transform>();
-        rotations = true;
+        rotations = false;
         movable = true;
     }
 
