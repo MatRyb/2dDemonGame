@@ -25,9 +25,8 @@ public class CharacterMove : MonoBehaviour
     private float smooth = 0.01f;
     private float characterVelSpeedUpAfterTurningMovement = 0.003f;
 
-    private Transform childAxis;
-
     public bool rotations;
+    public bool movable;
 
     public void SetVel(float value) 
     { 
@@ -47,46 +46,38 @@ public class CharacterMove : MonoBehaviour
     {
         characterVelVector.x = characterVel;
         pivot = GetComponent<Transform>();
-        childAxis = GetComponentInChildren<Transform>();
         rotations = true;
+        movable = true;
     }
 
+    // Set up custom Methods to fit in the "movable" if statement
     private void FixedUpdate()
     {
-        if(rotations)
+        if (movable)
         {
-            if(characterVelVector.x > characterVel * characterSlowDown)
-            {
-                characterVelVector.x = characterVelVector.x * 0.99f;
-            }
-            pivot.transform.Translate(characterVelVector);
-        }
-        else
-        {
-            if(characterVelVector.x < characterVel) 
-            {
-                characterVelVector.x += characterVelSpeedUpAfterTurningMovement;
-                pivot.transform.Translate(characterVelVector);
-            }
-            else
-            {
-                pivot.transform.Translate(characterVelVector * 1.0f);
-            }
-
-        }
-
-
-        pivot.transform.Rotate(characterRotationVector);
-        if (characterRotationVector.y != 0 && !rotations)
-        {
-            characterRotationVector.y *= smooth;
+            RotateUpdate();
         }
     }
 
     private void Update()
     {
+        if (movable)
+        {
+            MovementUpdater();
+        }
+    }
+
+
+
+
+
+
+
+    // Custom Movement and Rotation methods.
+    private void MovementUpdater()
+    {
         if (characterVel < characterVelVector.x)
-        { 
+        {
             characterVelVector.x = characterVel;
         }
 
@@ -100,6 +91,37 @@ public class CharacterMove : MonoBehaviour
         {
             characterRotationVector.y = characterRotation;
             rotations = true;
+        }
+    }
+
+    private void RotateUpdate()
+    {
+        if (rotations)
+        {
+            if (characterVelVector.x > characterVel * characterSlowDown)
+            {
+                characterVelVector.x = characterVelVector.x * 0.99f;
+            }
+            pivot.transform.Translate(characterVelVector);
+        }
+        else
+        {
+            if (characterVelVector.x < characterVel)
+            {
+                characterVelVector.x += characterVelSpeedUpAfterTurningMovement;
+                pivot.transform.Translate(characterVelVector);
+            }
+            else
+            {
+                pivot.transform.Translate(characterVelVector * 1.0f);
+            }
+
+        }
+
+        pivot.transform.Rotate(characterRotationVector);
+        if (characterRotationVector.y != 0 && !rotations)
+        {
+            characterRotationVector.y *= smooth;
         }
     }
 }
