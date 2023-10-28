@@ -6,23 +6,29 @@ public class TrailCollider : MonoBehaviour
 {
     [SerializeField]
     private TrailRenderer trailRenderer;
+
     [SerializeField]
     private GameObject colliderDaddy; // father of all colliders
+
     List<GameObject> colliders;
     List<GameObject> collidersQueue;
+    GameObject newCollider;
+
     [SerializeField]
     private GameObject player;
     [SerializeField]
     private CharacterMove characterMove;
-    GameObject newCollider;
-
+    
 
     int i = 0;
-    bool isWaitingToBePlaced = false;
+
+
     private void Start()
     {
         colliders = new List<GameObject>();
         collidersQueue   = new List<GameObject>();
+        //collidersQueue.Add(colliderDaddy);    // i can't add this line beacuse it fucks everything up
+                                                // i have truly no idea wtf is going on
     }
     // Update is called once per frame
     void Update()
@@ -40,9 +46,9 @@ public class TrailCollider : MonoBehaviour
                 i = 0;
             }
         }
-        if(collidersQueue.Count > 2)
+        if(collidersQueue.Count > 3) //number of colliders that will be inactive at the time
         {
-            collidersQueue[i].SetActive(true);
+            collidersQueue[0].SetActive(true);
             colliders.Add(collidersQueue[0]);
             collidersQueue.RemoveAt(0);
         }
