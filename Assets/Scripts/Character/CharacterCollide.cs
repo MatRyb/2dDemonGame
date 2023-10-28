@@ -17,10 +17,17 @@ public class CharacterCollide : MonoBehaviour
     {
         if(collision.gameObject.tag == "charColl") 
         {
-            characterMove.movable = false;
-
-            // Freezes all player movement when collission has occured.
-            rb.constraints = RigidbodyConstraints.FreezeAll;
+            OnCharDeath();
         }
+    }
+
+    public void OnCharDeath()
+    {
+        characterMove.movable = false;
+
+        // Freezes all player movement when collission has occured.
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+
+        // THIS IS WHERE THE "ON DEATH" code will go
     }
 }

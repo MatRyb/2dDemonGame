@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1331350728290627895}
   - component: {fileID: 1311372737324111576}
   m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
+  m_Name: PlayerModel
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,9 +122,10 @@ GameObject:
   - component: {fileID: 637565039507113441}
   - component: {fileID: 1928777575413576539}
   - component: {fileID: 3339613909746653580}
+  - component: {fileID: 2305188060580582548}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,6 +144,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9062515638636199713}
+  - {fileID: 904156070378616528}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7512305736632646061
@@ -235,9 +237,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivot: {fileID: 540941087174532438}
-  characterVel: 0.25
+  characterVel: 0.3
   characterRotation: 2.8
   characterSlowDown: 0.6
+  rotations: 0
+  movable: 0
 --- !u!114 &1928777575413576539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,3 +267,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0.01
+--- !u!114 &2305188060580582548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3186503992316507403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f4750431abe6924e9fb1bb16a470d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderDaddy: {fileID: 7109023222185747949, guid: 77b63f56acc2a4d43b3d8efeb66aabaf, type: 3}
+  player: {fileID: 3186503992316507403}
+  characterMove: {fileID: 637565039507113441}
+  spawnCollider: {fileID: 4540924433601444863}
+--- !u!1 &4540924433601444863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904156070378616528}
+  m_Layer: 0
+  m_Name: ColliderSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &904156070378616528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4540924433601444863}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 540941087174532438}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

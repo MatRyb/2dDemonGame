@@ -6,6 +6,8 @@ TagManager:
   tags:
   - charColl
   - charTrig
+  - ActiveTrail
+  - InActiveTrail
   layers:
   - Default
   - TransparentFX
