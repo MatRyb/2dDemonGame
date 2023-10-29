@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  timeToDeath: 0.75
+  timeToDeath: 1.5
   timer: 0
 --- !u!114 &3339613909746653580
 MonoBehaviour:
