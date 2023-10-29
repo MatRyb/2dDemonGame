@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI finalTimeDisplay;
-    [SerializeField]
-    private GameObject deathMenu;
+    [SerializeField] AudioEnviroSFX audio;
+    [SerializeField] private GameObject deathMenu;
     [SerializeField]
     private GameObject winMenu;
     [SerializeField]
@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     private int points = 0;
     public void HandleDeath()
     {
+        audio.audioSource.Stop();
+        audio.audioSource.clip = audio.enviroSfx[2];
+        audio.audioSource.Play();
         deathMenu.SetActive(true);
     }      
     public void Extinguish()
@@ -31,6 +34,9 @@ public class GameManager : MonoBehaviour
         points++;
         if(points >= numberOfFires)
         {
+            audio.audioSource.Stop();
+            audio.audioSource.clip = audio.enviroSfx[3];
+            audio.audioSource.Play();
             winMenu.SetActive(true);
             float gameTime = timer.getWinTime();
             int minutes = (int)gameTime / 60;
