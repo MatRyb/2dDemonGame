@@ -22,6 +22,11 @@ public class FullEngineState : IState
             controller.ChangeState(controller.jumpState);
         }
 
+        if (controller.character.slowed)
+        {
+            controller.ChangeState(controller.swampState);
+        }
+
         controller.characterTurning = controller.character.rotations;
         if (controller.characterTurning)
         {

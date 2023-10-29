@@ -11,6 +11,7 @@ public class StateController : MonoBehaviour
     public TurningState turningState = new TurningState();
     public JumpState jumpState = new JumpState();
     public DeadState deadState = new DeadState();
+    public SwampState swampState = new SwampState();
 
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public CharacterMove character;
