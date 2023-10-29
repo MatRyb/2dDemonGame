@@ -57,6 +57,19 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+    public void PlayLevel4()
+    {
+        SceneManager.LoadScene(4);
+
+    }
+    public void PlayLevel5()
+    {
+        SceneManager.LoadScene(5);
+    }
+    public void PlayLevel6() //old guy
+    {
+        SceneManager.LoadScene(6);
+    }
 
     public void DisplayTopScores()
     {

@@ -5068,8 +5068,13 @@ MonoBehaviour:
   fireFlare: {fileID: 4255093626677906333}
   firstColor: {r: 0.83599997, g: 0.78374994, b: 0.41053566, a: 1}
   secondColor: {r: 0.7882353, g: 0.4161161, b: 0.16868235, a: 1}
+<<<<<<< HEAD
   IntensityLow: 0.1
   IntensityHigh: 0.8
+=======
+  IntensityLow: 0.2
+  IntensityHigh: 0.21
+>>>>>>> 5b9dfd9282c7c2fdf4b37a042bf625d96db906a1
 --- !u!82 &1252393694952002029
 AudioSource:
   m_ObjectHideFlags: 0
