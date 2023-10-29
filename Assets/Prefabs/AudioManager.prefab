@@ -296,6 +296,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6dba353dacc04e543b7572f9d8ecaea1, type: 3}
   - {fileID: 8300000, guid: a43f13bb9228ab7439d1dbff1b87d6d0, type: 3}
   - {fileID: 8300000, guid: 2449d49faff6cf64f9e659264271566f, type: 3}
+  - {fileID: 8300000, guid: fe0a13584d2555440ac5bea8b70596e0, type: 3}
   characterTurning: 0
   characterAccelerateTimer: 0
 --- !u!1 &2086669621829162911
@@ -378,9 +379,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundAudioClips:
-  - {fileID: 8300000, guid: a099fe18c40cb3b48b6ce00e87ee01c7, type: 3}
-  - {fileID: 8300000, guid: 5f737c4a1608957448310be2712a5152, type: 3}
-  - {fileID: 8300000, guid: d1eba29c2a7418840941d76456fa774a, type: 3}
+  - {fileID: 8300000, guid: 2c13518c818aec84080d06082523eb5b, type: 3}
+  - {fileID: 8300000, guid: 89eb7e16ef6fab7438cbc04e700ed389, type: 3}
+  - {fileID: 8300000, guid: ca85c1b95b0954642945e49417fbeee3, type: 3}
   - {fileID: 8300000, guid: 158e4fcb055bd624eae8f1bc845f8873, type: 3}
 --- !u!82 &8218845426321255461
 AudioSource:
