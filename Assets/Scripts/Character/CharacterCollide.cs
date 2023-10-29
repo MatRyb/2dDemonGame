@@ -67,6 +67,11 @@ public class CharacterCollide : MonoBehaviour
             // This is logic when hitting the smoke
             OnCharDeath();
         }
+        else if (collision.gameObject.tag == "wallColl")
+        {
+            // This is logic when hitting the smoke
+            OnCharDeath();
+        }
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -79,22 +84,35 @@ public class CharacterCollide : MonoBehaviour
             {
                 characterMove.slowed = true;
             }
-            else if (obsScript.obstacleType == ObstacleScript.ObstacleType.Fog)
-            {
-                characterMove.boosted = true;
-            }
         }
     }
 
-    private void OnTriggerExit(Collider trigger)
+    private void OnTriggerStay(Collider other)
     {
-        if(trigger.gameObject.tag == "charColl")
+
+        if (other.gameObject.tag == "charColl")
         {
-            characterMove.slowed = false;
-            
-            characterMove.boosted = false;
+            ObstacleScript obsScript = other.gameObject.GetComponent<ObstacleScript>();
+
+            if (obsScript.obstacleType == ObstacleScript.ObstacleType.Fog)
+            {
+                characterMove.boosted = true;
+
+                StartCoroutine(StopBoosting());
+            }
         }
+ 
     }
+
+    IEnumerator StopBoosting()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        characterMove.boosted = false;
+    }
+
+
+
 
     public void OnCharDeath()
     {

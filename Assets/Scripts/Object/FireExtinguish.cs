@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FireExtinguish : MonoBehaviour
 {
+
     public void Extinguish(float time)
     {
         Destroy(gameObject, time);
     }
-
 
 }

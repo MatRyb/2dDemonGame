@@ -9,6 +9,7 @@ TagManager:
   - ActiveTrail
   - InActiveTrail
   - PlayerModel
+  - wallColl
   layers:
   - Default
   - TransparentFX
