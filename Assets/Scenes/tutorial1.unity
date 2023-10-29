@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667543, g: 0.4842716, b: 0.56452405, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1321,6 +1321,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35dbc21bf253f2409f7f93bb6d469ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2021292892 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3291742813087112625, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+  m_PrefabInstance: {fileID: 2021292887}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2021292893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7078454650850765079, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+  m_PrefabInstance: {fileID: 2021292887}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2100558578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1334,6 +1350,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 1732593531956535668, guid: ef8f4e7130d0cdc4ca80e8a0592fdb57, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 1753131865}
+    - target: {fileID: 1732593531956535668, guid: ef8f4e7130d0cdc4ca80e8a0592fdb57, type: 3}
       propertyPath: timer
       value: 
       objectReference: {fileID: 2021292891}
@@ -1345,6 +1365,14 @@ PrefabInstance:
       propertyPath: deathMenu
       value: 
       objectReference: {fileID: 2021292890}
+    - target: {fileID: 1732593531956535668, guid: ef8f4e7130d0cdc4ca80e8a0592fdb57, type: 3}
+      propertyPath: playerName
+      value: 
+      objectReference: {fileID: 2021292892}
+    - target: {fileID: 1732593531956535668, guid: ef8f4e7130d0cdc4ca80e8a0592fdb57, type: 3}
+      propertyPath: scoresMenu
+      value: 
+      objectReference: {fileID: 2021292893}
     - target: {fileID: 1732593531956535668, guid: ef8f4e7130d0cdc4ca80e8a0592fdb57, type: 3}
       propertyPath: numberOfFires
       value: 2
