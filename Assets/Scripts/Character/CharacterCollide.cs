@@ -87,6 +87,20 @@ public class CharacterCollide : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.tag == "charColl")
+        {
+            ObstacleScript obsScript = collision.gameObject.GetComponent<ObstacleScript>();
+
+            if (obsScript.obstacleType == ObstacleScript.ObstacleType.Swamp)
+            {
+                characterMove.slowed = false;
+            }
+        }
+    }
+
+
     private void OnTriggerStay(Collider other)
     {
 
