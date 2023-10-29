@@ -4954,9 +4954,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7337070603498316311}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 5.7088013, y: 0.50006104, z: -5.076291}
-  m_LocalScale: {x: 2.78093, y: 2.78093, z: 2.78093}
+  m_LocalScale: {x: 2.78093, y: 2.7809298, z: 2.7809298}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7591817731710854520}
@@ -5066,8 +5066,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: f03afa6c3478ddb44a473dd3aceeb0a1, type: 2}
   mr: {fileID: 1358294750147202563}
   fireFlare: {fileID: 4255093626677906333}
-  firstColor: {r: 0.9811321, g: 0.9462603, b: 0.7358491, a: 0}
-  secondColor: {r: 1, g: 0.42004457, b: 0.07075471, a: 0}
+  firstColor: {r: 0.83599997, g: 0.78374994, b: 0.41053566, a: 1}
+  secondColor: {r: 0.7882353, g: 0.4161161, b: 0.16868235, a: 1}
 --- !u!82 &1252393694952002029
 AudioSource:
   m_ObjectHideFlags: 0
