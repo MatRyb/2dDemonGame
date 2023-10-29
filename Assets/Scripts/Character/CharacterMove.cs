@@ -147,7 +147,7 @@ public class CharacterMove : MonoBehaviour
     // Custom Movement and Rotation methods.
     private void MovementUpdater()
     {
-        if (characterVel < characterVelVector.x && !slowed && !boosted)
+        if (!slowed && !boosted)
         {
             characterVelVector.x = characterVel;
         }
