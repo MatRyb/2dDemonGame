@@ -17,6 +17,7 @@ public class CharacterMove : MonoBehaviour
     [SerializeField]
     [Range(0, 5)]
     private float characterVel = 0.1f;
+    private float baseVel;
 
     [SerializeField]
     [Range(0, 5)]
@@ -32,6 +33,7 @@ public class CharacterMove : MonoBehaviour
     public bool rotations;
     public bool movable;
     public bool slowed;
+    public bool boosted;
 
     // Jump Variables
 
@@ -45,9 +47,9 @@ public class CharacterMove : MonoBehaviour
 
     // End of Jump Variables
 
-    public void SetVel(float value) 
-    { 
-        characterVel = value; 
+    public void SetVel(float value)
+    {
+        characterVel = value;
     }
 
     public float GetVel()
@@ -63,13 +65,14 @@ public class CharacterMove : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         characterVelVector.x = characterVel;
+        baseVel = characterVel;
         pivot = GetComponent<Transform>();
         rotations = false;
         movable = true;
 
-        foreach(Transform child in transform)
+        foreach (Transform child in transform)
         {
-            if(child.tag == "PlayerModel")
+            if (child.tag == "PlayerModel")
             {
                 charModel = child;
             }
@@ -144,14 +147,17 @@ public class CharacterMove : MonoBehaviour
     // Custom Movement and Rotation methods.
     private void MovementUpdater()
     {
-        if (characterVel < characterVelVector.x || !slowed)
+        if (characterVel < characterVelVector.x && !slowed && !boosted)
         {
             characterVelVector.x = characterVel;
         }
         else if (slowed)
         {
             characterVelVector.x = characterVel * 0.75f;
-            Debug.Log("Slowing down");
+        }
+        else if (boosted)
+        {
+            characterVelVector.x = characterVel * 1.8f;
         }
 
         

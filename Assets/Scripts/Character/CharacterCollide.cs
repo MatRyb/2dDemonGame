@@ -75,12 +75,13 @@ public class CharacterCollide : MonoBehaviour
         {
             ObstacleScript obsScript = collision.gameObject.GetComponent<ObstacleScript>();
 
-            if (obsScript.obstacleType == ObstacleScript.ObstacleType.Swamp ||
-                obsScript.obstacleType == ObstacleScript.ObstacleType.Fog)
+            if (obsScript.obstacleType == ObstacleScript.ObstacleType.Swamp)
             {
                 characterMove.slowed = true;
-
-                Debug.Log("Hit a swamp!");
+            }
+            else if (obsScript.obstacleType == ObstacleScript.ObstacleType.Fog)
+            {
+                characterMove.boosted = true;
             }
         }
     }
@@ -91,12 +92,9 @@ public class CharacterCollide : MonoBehaviour
         {
             ObstacleScript obsScript = collision.gameObject.GetComponent<ObstacleScript>();
 
-            if (obsScript.obstacleType == ObstacleScript.ObstacleType.Swamp)
-            {
-                characterMove.slowed = false;
-
-                Debug.Log("Hit a swamp!");
-            }
+            characterMove.slowed = false;
+            
+            characterMove.boosted = false;
         }
     }
 
