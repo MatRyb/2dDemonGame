@@ -550,10 +550,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1286440414}
-    - target: {fileID: 713710800285812901, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SaveScore
-      objectReference: {fileID: 0}
     - target: {fileID: 1982105760176769624, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
       propertyPath: m_LocalPosition.x
       value: 382.23917
@@ -602,10 +598,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1286440414}
-    - target: {fileID: 7000592981324399376, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenScoreSavingMenu
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -895,49 +887,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3544747763681056202, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityLow
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3544747763681056202, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityHigh
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162204310763895173, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityLow
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162204310763895173, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityHigh
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6278677160905019405, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityLow
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6278677160905019405, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityHigh
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6648136535702292826, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityLow
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6648136535702292826, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityHigh
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 7634842936348116600, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
       propertyPath: m_Name
       value: Playfield
-      objectReference: {fileID: 0}
-    - target: {fileID: 8050746315908083654, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityLow
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8050746315908083654, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityHigh
-      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8130221751995470100, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -978,22 +930,6 @@ PrefabInstance:
     - target: {fileID: 8130221751995470100, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233374661252862597, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityLow
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233374661252862597, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityHigh
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8877377107008117824, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityLow
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8877377107008117824, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
-      propertyPath: IntensityHigh
-      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
