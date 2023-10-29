@@ -22,6 +22,7 @@ public class SpriteAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // the absolute fucking void I must have had in my mind when I made it is impossible to imagine
         time += Time.deltaTime;
         colorTime += Time.deltaTime;
         int index = (int)(time * 5.0f);
