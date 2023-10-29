@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3181260865404966604}
   - component: {fileID: 1880029978693445670}
   - component: {fileID: 2017183859823634765}
-  - component: {fileID: -2122731799582054020}
+  - component: {fileID: 4005627623010362430}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: charColl
@@ -28,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4636057362954894992}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &3181260865404966604
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2122731799582054020
+--- !u!114 &4005627623010362430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,9 +115,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4636057362954894992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdec555acb8f046efb5867d744a6e531, type: 3}
+  m_Script: {fileID: 11500000, guid: e2d37be6d9eab42c589501b4b98e0caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obsName: 
-  obsMat: {fileID: 0}
-  obsType: 1
+  deathOnImpact: 0
+  obstacleType: 0
