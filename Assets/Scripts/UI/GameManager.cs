@@ -24,7 +24,10 @@ public class GameManager : MonoBehaviour
     private int points = 0;
     public void HandleDeath()
     {
-        audio.audioSource.Stop();
+        if(audio.audioSource.isPlaying)
+        {
+            audio.audioSource.Stop();
+        }
         audio.audioSource.clip = audio.enviroSfx[2];
         audio.audioSource.Play();
         deathMenu.SetActive(true);
@@ -34,7 +37,10 @@ public class GameManager : MonoBehaviour
         points++;
         if(points >= numberOfFires)
         {
-            audio.audioSource.Stop();
+            if (audio.audioSource.isPlaying)
+            {
+                audio.audioSource.Stop();
+            }
             audio.audioSource.clip = audio.enviroSfx[3];
             audio.audioSource.Play();
             winMenu.SetActive(true);
