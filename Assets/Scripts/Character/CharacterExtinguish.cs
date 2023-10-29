@@ -11,8 +11,6 @@ public class CharacterExtinguish : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triggered Fire Collider");
-
         if(other.gameObject.tag == "charTrig")
         {
             audioEnviroSFX.audioSource.clip = audioEnviroSFX.enviroSfx[0];

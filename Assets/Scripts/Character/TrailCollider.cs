@@ -63,7 +63,7 @@ public class TrailCollider : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!colliding)
+        if (!colliding && other.gameObject.tag != "charTrig")
         {
             StartCoroutine(DropTrail(Random.Range(0.01f,0.04f)));
         }

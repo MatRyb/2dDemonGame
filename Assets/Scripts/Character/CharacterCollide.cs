@@ -10,11 +10,32 @@ public class CharacterCollide : MonoBehaviour
     GameManager gameManager;
     StateController stateController;
 
+    [SerializeField] private float timeToDeath = 0.5f;
+    [SerializeField] private float timer;
+
     void Start()
     {
         characterMove = GetComponent<CharacterMove>();
         stateController = FindObjectOfType<StateController>();
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
+    {
+        if(characterMove.slowed == true)
+        {
+            timer = timer + Time.deltaTime;
+
+            if (timer > timeToDeath)
+            {
+                OnCharDeath();
+                characterMove.slowed = false; // to prevent constant calling
+            }
+        }
+        else if (characterMove.slowed == false && timer != 0)
+        {
+            timer = 0;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -27,21 +48,13 @@ public class CharacterCollide : MonoBehaviour
             {
                 OnCharDeath();
             }
-            else if (obsScript.obstacleType == ObstacleScript.ObstacleType.Swamp)
-            {
-                Debug.Log("Hit a swamp!");
-            }
             else if (obsScript.obstacleType == ObstacleScript.ObstacleType.Farm)
             {
                 Debug.Log("Hit a Farm!");
             }
-            else if (obsScript.obstacleType == ObstacleScript.ObstacleType.Fog)
-            {
-                Debug.Log("Hit some Fog!");
-            }
             else if (obsScript.obstacleType == ObstacleScript.ObstacleType.Village)
             {
-                Debug.Log("Hit a Village");
+                OnCharDeath();
             }
             else
             {
@@ -56,16 +69,46 @@ public class CharacterCollide : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "charColl")
+        {
+            ObstacleScript obsScript = collision.gameObject.GetComponent<ObstacleScript>();
+
+            if (obsScript.obstacleType == ObstacleScript.ObstacleType.Swamp ||
+                obsScript.obstacleType == ObstacleScript.ObstacleType.Fog)
+            {
+                characterMove.slowed = true;
+
+                Debug.Log("Hit a swamp!");
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        if(collision.gameObject.tag == "charColl")
+        {
+            ObstacleScript obsScript = collision.gameObject.GetComponent<ObstacleScript>();
+
+            if (obsScript.obstacleType == ObstacleScript.ObstacleType.Swamp)
+            {
+                characterMove.slowed = false;
+
+                Debug.Log("Hit a swamp!");
+            }
+        }
+    }
+
     public void OnCharDeath()
     {
         characterMove.movable = false;
 
-        // Freezes all player movement when collission has occured.
-        rb.constraints = RigidbodyConstraints.FreezeAll;
-
         // THIS IS WHERE THE "ON DEATH" code will go
         gameManager.HandleDeath();
 
+        // Freezes all player movement when collission has occured.
+        rb.constraints = RigidbodyConstraints.FreezeAll;
 
         // I am become Death the Destroy of Worlds!
     }

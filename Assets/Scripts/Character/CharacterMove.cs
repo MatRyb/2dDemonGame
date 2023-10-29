@@ -31,6 +31,7 @@ public class CharacterMove : MonoBehaviour
 
     public bool rotations;
     public bool movable;
+    public bool slowed;
 
     // Jump Variables
 
@@ -143,10 +144,17 @@ public class CharacterMove : MonoBehaviour
     // Custom Movement and Rotation methods.
     private void MovementUpdater()
     {
-        if (characterVel < characterVelVector.x)
+        if (characterVel < characterVelVector.x || !slowed)
         {
             characterVelVector.x = characterVel;
         }
+        else if (slowed)
+        {
+            characterVelVector.x = characterVel * 0.75f;
+            Debug.Log("Slowing down");
+        }
+
+        
 
         rotations = false;
         if (Input.GetKey(KeyCode.A))
