@@ -11,13 +11,21 @@ public class CharacterExtinguish : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "charTrig")
+        if (other.gameObject.tag == "charTrig")
         {
             audioEnviroSFX.audioSource.clip = audioEnviroSFX.enviroSfx[0];
             audioEnviroSFX.audioSource.Play();
             triggered = true;
             other.GetComponent<FireExtinguish>().Extinguish(time);
             gameManager.Extinguish();
+        }
+
+        ObstacleScript obsScript = other.gameObject.GetComponent<ObstacleScript>();
+        if (obsScript.obstacleType == ObstacleScript.ObstacleType.Swamp)
+        {
+            audioEnviroSFX.audioSource.clip = audioEnviroSFX.enviroSfx[1];
+            audioEnviroSFX.audioSource.Play();
+            // fooo!
         }
     }
 }
