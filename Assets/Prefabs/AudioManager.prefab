@@ -296,6 +296,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6dba353dacc04e543b7572f9d8ecaea1, type: 3}
   - {fileID: 8300000, guid: a43f13bb9228ab7439d1dbff1b87d6d0, type: 3}
   - {fileID: 8300000, guid: 2449d49faff6cf64f9e659264271566f, type: 3}
+  - {fileID: 8300000, guid: fe0a13584d2555440ac5bea8b70596e0, type: 3}
   characterTurning: 0
   characterAccelerateTimer: 0
 --- !u!1 &2086669621829162911

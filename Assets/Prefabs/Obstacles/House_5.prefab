@@ -13,8 +13,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: b89c51c0855aa47c2968d1812e1ad80b, type: 2}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalRotation.w
@@ -52,6 +60,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2017183859823634765, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017183859823634765, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017183859823634765, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: m_Center.x
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017183859823634765, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: m_Center.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181260865404966604, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -59,6 +83,10 @@ PrefabInstance:
     - target: {fileID: 4005627623010362430, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: obstacleType
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005627623010362430, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: deathOnImpact
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4636057362954894992, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_Name
