@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7407774829623687061
+--- !u!1001 &4630421535619385697
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,21 +8,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2122731799582054020, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: obsMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b73a6e162d7b4da3adca1f229abdc07, type: 2}
+    - target: {fileID: -2122731799582054020, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: obsName
+      value: Swamp
+      objectReference: {fileID: 0}
+    - target: {fileID: -2122731799582054020, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: obsType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2122731799582054020, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: speedEffect
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 1880029978693445670, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dde9cd32dce1149d4a4f34aeb2d22fd6, type: 2}
+      objectReference: {fileID: 2100000, guid: d6db2b85590c14e389b390cc76675679, type: 2}
+    - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 12.6
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.30316162
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 4.88
       objectReference: {fileID: 0}
     - target: {fileID: 1985444804815271733, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_LocalRotation.w
@@ -52,20 +76,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2017183859823634765, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3181260865404966604, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 4005627623010362430, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: obstacleType
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4636057362954894992, guid: 4710534bd83a14324b6884af36419d72, type: 3}
       propertyPath: m_Name
-      value: well
+      value: Swamp 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 2017183859823634765, guid: 4710534bd83a14324b6884af36419d72, type: 3}
+    - {fileID: 2805561018667515345, guid: 4710534bd83a14324b6884af36419d72, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
