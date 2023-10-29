@@ -141,6 +141,8 @@ public class CharacterMove : MonoBehaviour
 
         jumping = false;
 
+        characterVel = baseVel;
+
     }
 
 
