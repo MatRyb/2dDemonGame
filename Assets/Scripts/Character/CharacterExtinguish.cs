@@ -20,12 +20,16 @@ public class CharacterExtinguish : MonoBehaviour
             gameManager.Extinguish();
         }
 
-        ObstacleScript obsScript = other.gameObject.GetComponent<ObstacleScript>();
-        if (obsScript.obstacleType == ObstacleScript.ObstacleType.Swamp)
+        if (other.gameObject.tag == "charColl")
         {
-            audioEnviroSFX.audioSource.clip = audioEnviroSFX.enviroSfx[1];
-            audioEnviroSFX.audioSource.Play();
-            // fooo!
+            ObstacleScript obsScript = other.gameObject.GetComponent<ObstacleScript>();
+
+            if (obsScript.obstacleType == ObstacleScript.ObstacleType.Fog)
+            {
+                audioEnviroSFX.audioSource.clip = audioEnviroSFX.enviroSfx[1];
+                audioEnviroSFX.audioSource.Play();
+                // fooo!
+            }
         }
     }
 }
