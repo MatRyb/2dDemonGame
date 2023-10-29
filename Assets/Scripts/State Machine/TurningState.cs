@@ -46,6 +46,11 @@ public class TurningState : IState
             controller.character.gameObject.GetComponent<AudioSource>().Stop();
         }
 
+        if (controller.character.slowed)
+        {
+            controller.ChangeState(controller.swampState);
+        }
+
         controller.characterTurning = controller.character.rotations;
         if (!controller.characterTurning)
         {
