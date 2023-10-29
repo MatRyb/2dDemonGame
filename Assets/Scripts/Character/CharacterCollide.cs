@@ -86,12 +86,10 @@ public class CharacterCollide : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider collision)
+    private void OnTriggerExit(Collider trigger)
     {
-        if(collision.gameObject.tag == "charColl")
+        if(trigger.gameObject.tag == "charColl")
         {
-            ObstacleScript obsScript = collision.gameObject.GetComponent<ObstacleScript>();
-
             characterMove.slowed = false;
             
             characterMove.boosted = false;
