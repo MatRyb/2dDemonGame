@@ -77,9 +77,9 @@ public class CharacterMove : MonoBehaviour
         startSize = charModel.localScale;
 
         maxSize = new Vector3
-            (startSize.x + 3f,
-            startSize.y + 3f,
-            startSize.z + 3f);
+            (startSize.x + 0.5f,
+            startSize.y + 0.5f,
+            startSize.z + 0.5f);
     }
 
     // Set up custom Methods to fit in the "movable" if statement
