@@ -855,6 +855,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 57914153162414953, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
+      propertyPath: m_TagString
+      value: ActiveTrail
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962505932209865060, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
+      propertyPath: m_TagString
+      value: ActiveTrail
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506663588072412090, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
+      propertyPath: m_TagString
+      value: ActiveTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 7634842936348116600, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
       propertyPath: m_Name
       value: Playfield
@@ -899,8 +911,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8940748522568011189, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
+      propertyPath: m_TagString
+      value: ActiveTrail
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3789811351339368878, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
+    - {fileID: 1016766901461728060, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
+    - {fileID: 9036725370246858964, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
+    - {fileID: 7090836453949756997, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
+    - {fileID: 7995558886517006305, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
+    - {fileID: 3239117993607723798, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
+    - {fileID: 4098090271742303499, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73bcbb36c4b46d04e9a567c31f8577e4, type: 3}

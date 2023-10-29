@@ -29,7 +29,7 @@ public class ColliderDaddyScript : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // set trail to active
-        this.tag = "charColl";
+        this.tag = "ActiveTrail";
         this.GetComponent<SphereCollider>().isTrigger = false;
     }
 
