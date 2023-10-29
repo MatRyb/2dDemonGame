@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,8 +12,12 @@ public class GameManager : MonoBehaviour
     private GameObject deathMenu;
     [SerializeField]
     private GameObject winMenu;
+    [SerializeField]
+    private GameObject scoresMenu;
     //[SerializeField]
     //private GameObject winMenu;
+    [SerializeField]
+    private TMP_InputField playerName;
     [SerializeField]
     private Timer timer;
     public int numberOfFires = 7;
@@ -43,4 +48,18 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+    public void SaveScore()
+    {
+        LeaderBoard ld = (LeaderBoard)FindObjectsOfType(typeof(LeaderBoard))[0];
+        ld.AddRecord(playerName.text, timer.getWinTime(), SceneManager.GetActiveScene().buildIndex);
+        playerName.text = "";
+        winMenu.SetActive(true);
+        scoresMenu.SetActive(false);
+    }
+    public void OpenScoreSavingMenu()
+    {
+        winMenu.SetActive(false);
+        scoresMenu.SetActive(true);
+    }
+
 }

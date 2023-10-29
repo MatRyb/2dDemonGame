@@ -17,7 +17,6 @@ public class DeadState : IState
 
         // Freeze all movement
         // Stop all jumping
-        
     }
 
     public void OnExit(StateController controller)

@@ -9,7 +9,7 @@ public class DeathMenuController : MonoBehaviour
     private GameObject deathMenu;
     public void ReloadScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1.0f;
     }
     public void ReturnToMenu()
@@ -17,7 +17,7 @@ public class DeathMenuController : MonoBehaviour
         deathMenu.SetActive(false);
         //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
         
     }
 }
