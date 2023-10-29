@@ -62,7 +62,7 @@ public class MenuController : MonoBehaviour
     {
         scoreDisplay.text = "";
         LeaderBoard ld = (LeaderBoard)FindObjectsOfType(typeof(LeaderBoard))[0];
-        
+        ld.SortScores();
         for(int i = 0; i < 3; i++)
         {
             if (i < ld.scores.Count)

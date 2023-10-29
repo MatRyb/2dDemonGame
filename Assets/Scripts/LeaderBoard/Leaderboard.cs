@@ -31,11 +31,11 @@ public class LeaderBoard : MonoBehaviour
         scores.Add(record);
         Debug.Log(scores);
     }
-    private void SortScores()
+    public void SortScores()
     {
-        for(int i =0; i < scores.Count-1; i++)
+        for(int i = 0; i < scores.Count-1; i++)
         {
-            for(int j = 0; i < scores.Count - 1; j++)
+            for(int j = 0; j < scores.Count - 1; j++)
             {
                 if (scores[i].score > scores[i + 1].score)
                 {
