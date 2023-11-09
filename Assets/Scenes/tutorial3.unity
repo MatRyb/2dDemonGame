@@ -2087,6 +2087,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1959373123}
+    - target: {fileID: 713710800285812901, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveScore
+      objectReference: {fileID: 0}
     - target: {fileID: 1982105760176769624, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
       propertyPath: m_LocalPosition.x
       value: 382.23917
@@ -2135,6 +2139,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1959373123}
+    - target: {fileID: 7000592981324399376, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenScoreSavingMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078454650850765079, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

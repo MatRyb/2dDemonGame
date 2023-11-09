@@ -1795,6 +1795,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 408466572613117053, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408466572613117053, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e1fbec9f7ab7e8a4fa8b2e12a3b34505, type: 3}
     - target: {fileID: 713710800285812901, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

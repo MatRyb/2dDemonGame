@@ -2435,10 +2435,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2167679718284168499, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3012364071582837552, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
       propertyPath: m_Name
       value: ====UI====
@@ -2450,6 +2446,10 @@ PrefabInstance:
     - target: {fileID: 7000592981324399376, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenScoreSavingMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078454650850765079, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
