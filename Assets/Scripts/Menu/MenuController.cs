@@ -66,20 +66,21 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(5);
     }
 
-    public void DisplayTopScores()
+    
+    public void DisplayTopScores(int level)
     {
         scoreDisplay.text = "";
-        LeaderBoard ld = (LeaderBoard)FindObjectsOfType(typeof(LeaderBoard))[0];
+        LeaderBoard ld = (LeaderBoard)FindObjectsOfType(typeof(LeaderBoard))[0]; // there is only one leaderboard
         ld.SortScores();
         for(int i = 0; i < 3; i++)
         {
             if (i < ld.scores.Count)
             {
-                scoreDisplay.text += (i+1) + " " + ld.scores[i].name + " " + ld.scores[i].score + "\n";
+                scoreDisplay.text += (i+1) + " " + ld.scores[level][i].name + " " + ld.scores[level][i].score + "\n";
             }
         }
     }
-
+    
 
 
     public void QuitGame()

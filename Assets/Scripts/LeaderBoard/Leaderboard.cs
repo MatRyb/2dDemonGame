@@ -7,7 +7,8 @@ public class LeaderBoard : MonoBehaviour
 {
 
     public static LeaderBoard instance;
-    public List<Score> scores = new List<Score>();
+    public List<List<Score>> scores;
+    private int numberOfLevels = 5;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class LeaderBoard : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            scores = new List<List<Score>>(numberOfLevels);
         }
      
     }
@@ -27,24 +29,26 @@ public class LeaderBoard : MonoBehaviour
         Score record = new Score();
         record.name = name;
         record.score = score;
-        record.level = level;
-        scores.Add(record);
+        scores[level].Add(record);
         Debug.Log(scores);
     }
     public void SortScores()
     {
-        for(int i = 0; i < scores.Count-1; i++)
-        {
-            for(int j = 0; j < scores.Count - 1; j++)
+        for(int level = 0; level < numberOfLevels; level++)
+        { 
+            for(int i = 0; i < scores[level].Count-1; i++)
             {
-                if (scores[i].score > scores[i + 1].score)
+                for(int j = 0; j < scores[level].Count - 1; j++)
                 {
-                    Score temp = scores[i];
-                    scores[i] = scores[i + 1];
-                    scores[i + 1] = temp;
+                    if (scores[level][i].score > scores[level][i + 1].score)
+                    {
+                        Score temp = scores[level][i];
+                        scores[level][i] = scores[level][i + 1];
+                        scores[level][i + 1] = temp;
+                    }
                 }
-            }
 
+            }
         }
 
     }
