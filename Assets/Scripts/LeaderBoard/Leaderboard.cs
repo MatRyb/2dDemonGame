@@ -20,7 +20,11 @@ public class LeaderBoard : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            scores = new List<List<Score>>(numberOfLevels);
+            scores = new List<List<Score>>();
+            for(int i = 0; i < numberOfLevels; i++)
+            {
+                scores.Add(new List < Score >());
+            }
         }
      
     }

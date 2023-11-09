@@ -1240,6 +1240,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 408466572613117053, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408466572613117053, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e1fbec9f7ab7e8a4fa8b2e12a3b34505, type: 3}
+    - target: {fileID: 713710800285812901, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2100558579}
+    - target: {fileID: 713710800285812901, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024469361392975762, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 93.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024469361392975762, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 93.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024469361392975762, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 93.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024469361392975762, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024469361392975762, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 133.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024469361392975762, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1982105760176769624, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
       propertyPath: m_LocalPosition.x
       value: 382.23917
@@ -1280,16 +1320,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2167679718284168499, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3012364071582837552, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
       propertyPath: m_Name
       value: ====UI====
       objectReference: {fileID: 0}
+    - target: {fileID: 3589436641812783661, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589436641812783661, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -458
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252936326325091111, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945992276798917698, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000592981324399376, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2100558579}
+    - target: {fileID: 7000592981324399376, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenScoreSavingMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078454650850765079, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6864577321070095661, guid: f950fc1053c57f246815a2756e5b8211, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f950fc1053c57f246815a2756e5b8211, type: 3}

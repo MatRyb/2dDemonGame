@@ -74,7 +74,7 @@ public class MenuController : MonoBehaviour
         ld.SortScores();
         for(int i = 0; i < 3; i++)
         {
-            if (i < ld.scores.Count)
+            if (i < ld.scores[level].Count)
             {
                 scoreDisplay.text += (i+1) + " " + ld.scores[level][i].name + " " + ld.scores[level][i].score + "\n";
             }

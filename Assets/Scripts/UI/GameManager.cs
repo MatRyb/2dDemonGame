@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     private TMP_InputField playerName;
     [SerializeField]
     private Timer timer;
+    [SerializeField]
+    private int levelNumber;
     public int numberOfFires = 7;
     private int points = 0;
     public void HandleDeath()
@@ -63,7 +65,7 @@ public class GameManager : MonoBehaviour
     public void SaveScore()
     {
         LeaderBoard ld = (LeaderBoard)FindObjectsOfType(typeof(LeaderBoard))[0];
-        ld.AddRecord(playerName.text, timer.getWinTime(), SceneManager.GetActiveScene().buildIndex);
+        ld.AddRecord(playerName.text, timer.getWinTime(), levelNumber); //maybe we should not get the buildindex but use a variable
         playerName.text = "";
         winMenu.SetActive(true);
         scoresMenu.SetActive(false);
